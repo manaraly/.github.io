@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manar Aly Zahran - DevOps Engineer | Cloud Infrastructure Specialist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --secondary: #10b981;
+            --accent: #8b5cf6;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --text: #1e293b;
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--light);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: var(--gradient);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #fbbf24;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient);
+            color: white;
+            padding: 160px 0 100px;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .hero h2 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+
+        .hero-tagline {
+            font-size: 1.2rem;
+            max-width: 750px;
+            margin: 0 auto 2.5rem;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            padding: 14px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.8rem;
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #fbbf24;
+            transform: translateY(-5px);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.15rem;
+            color: #64748b;
+            margin-bottom: 3.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #475569;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--primary);
+        }
+
+        .highlight-box h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .highlight-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .highlight-list li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .highlight-list li::before {
+            content: "✓";
+            color: var(--secondary);
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+
+        /* Value Proposition Section */
+        .value-props {
+            background: var(--light);
+        }
+
+        .props-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .prop-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .prop-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .prop-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .prop-card h3 {
+            color: var(--dark);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .prop-card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        /* Projects Section */
+        .projects {
+            background: white;
+        }
+
+        .project-tabs {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .tab-btn {
+            padding: 12px 30px;
+            border: 2px solid var(--primary);
+            background: transparent;
+            color: var(--primary);
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .tab-btn.active {
+            background: var(--gradient);
+            color: white;
+            border-color: transparent;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border-top: 4px solid var(--primary);
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .project-icon {
+            width: 65px;
+            height: 65px;
+            background: var(--gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-icon i {
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .project-desc {
+            color: #64748b;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+
+        .tech-tag {
+            background: var(--gradient);
+            color: white;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Skills Section */
+        .skills {
+            background: var(--light);
+        }
+
+        .skills-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .skill-category h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem;
+            background: #f8fafc;
+            border-radius: 8px;
+            color: #475569;
+        }
+
+        .skill-item::before {
+            content: "✓";
+            color: var(--secondary);
+            font-weight: 700;
+        }
+
+        /* Experience Section */
+        .experience {
+            background: white;
+        }
+
+        .timeline {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            flex: 1;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin: 0 2rem;
+        }
+
+        .timeline-date {
+            display: inline-block;
+            background: var(--gradient);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content h3 {
+            color: var(--dark);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content h4 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content p {
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        /* Awards Section */
+        .awards {
+            background: var(--light);
+        }
+
+        .awards-intro {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #64748b;
+            margin-bottom: 3rem;
+        }
+
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .award-category {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .award-category h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .award-category ul {
+            list-style: none;
+        }
+
+        .award-category li {
+            padding: 0.9rem 0;
+            color: #475569;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            gap: 0.8rem;
+            align-items: flex-start;
+        }
+
+        .award-category li:last-child {
+            border: none;
+        }
+
+        .award-category li::before {
+            content: "🏆";
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--gradient);
+            color: white;
+        }
+
+        .contact .section-title,
+        .contact .section-subtitle {
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s;
+        }
+
+        .contact-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-5px);
+        }
+
+        .contact-card i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #fbbf24;
+        }
+
+        .contact-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-card a:hover {
+            color: #fbbf24;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 0;
+        }
+
+        .footer p {
+            margin: 0.5rem 0;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .timeline::before {
+                left: 0;
+            }
+
+            .timeline-item {
+                flex-direction: column !important;
+            }
+
+            .timeline-content {
+                margin: 0 0 0 2rem;
+            }
+
+            .projects-grid,
+            .props-grid,
+            .awards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">Manar Zahran</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-badge">Available for DevOps & Cloud Infrastructure Projects</div>
+            <h1>Manar Aly Zahran</h1>
+            <h2>DevOps Engineer | Cloud Infrastructure Specialist</h2>
+            <p class="hero-tagline">
+                Transforming infrastructure through automation and cloud excellence. 
+                Backed by systems engineering expertise and 14 international awards in robotics and innovation.
+            </p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">14</span>
+                    <span class="stat-label">Global Awards</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">11+</span>
+                    <span class="stat-label">Projects Delivered</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Hire Me</a>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://github.com/manaraly" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/manar-aly-" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:manaraly136@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://sciprofiles.com/profile/4620054" target="_blank" title="Research"><i class="fas fa-graduation-cap"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">DevOps Engineer with a unique systems engineering perspective</p>
+            
+            <div class="about-content">
+                <p>
+                    I'm a DevOps Engineer at LRNOVA specializing in cloud infrastructure automation, CI/CD pipelines, 
+                    and scalable production deployments. Currently pursuing my Master's in Cloud Networking Technologies 
+                    at Cairo University, I bring a research-driven approach to solving complex infrastructure challenges.
+                </p>
+                
+                <p>
+                    What sets me apart is my background in embedded systems and robotics engineering. Before transitioning 
+                    to DevOps, I designed control systems for electric vehicles, built autonomous robots, and developed 
+                    real-time embedded solutions. This foundation gives me deep understanding of systems architecture 
+                    from hardware to cloud—enabling me to design infrastructure that's both powerful and efficient.
+                </p>
+
+                <div class="highlight-box">
+                    <h3>Why This Background Matters for DevOps</h3>
+                    <ul class="highlight-list">
+                        <li><strong>Systems Thinking:</strong> Understanding infrastructure end-to-end, from low-level protocols to cloud architecture</li>
+                        <li><strong>Automation Excellence:</strong> Years of programming microcontrollers and robots translate to infrastructure automation</li>
+                        <li><strong>Problem-Solving:</strong> 14 international awards prove ability to tackle complex technical challenges</li>
+                        <li><strong>Documentation:</strong> University teaching assistant experience ensures clear technical communication</li>
+                        <li><strong>Proven Excellence:</strong> Published researcher in control systems optimization</li>
+                    </ul>
+                </div>
+
+                <p>
+                    Today, I help organizations automate their cloud infrastructure with AWS, Kubernetes, Terraform, 
+                    and comprehensive CI/CD pipelines. My approach combines DevOps best practices with systems-level 
+                    optimization to deliver reliable, scalable, and cost-efficient solutions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section id="services" class="value-props">
+        <div class="container">
+            <h2 class="section-title">What I Bring to Your Project</h2>
+            <p class="section-subtitle">Comprehensive DevOps expertise with systems engineering depth</p>
+            
+            <div class="props-grid">
+                <div class="prop-card">
+                    <div class="prop-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Cloud Infrastructure</h3>
+                    <p>Design and deploy scalable AWS infrastructure with EKS, Lambda, S3, and multi-region architecture. Cost optimization and security built-in.</p>
+                </div>
+
+                <div class="prop-card">
+                    <div class="prop-icon"><i class="fas fa-sync"></i></div>
+                    <h3>CI/CD Automation</h3>
+                    <p>Build robust pipelines with Jenkins, GitHub Actions, and ArgoCD. Automated testing, security scanning, and zero-downtime deployments.</p>
+                </div>
+
+                <div class="prop-card">
+                    <div class="prop-icon"><i class="fas fa-code"></i></div>
+                    <h3>Infrastructure as Code</h3>
+                    <p>Terraform and Ansible expertise for repeatable, version-controlled infrastructure. Documentation and best practices included.</p>
+                </div>
+
+                <div class="prop-card">
+                    <div class="prop-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Monitoring & Observability</h3>
+                    <p>Implement comprehensive monitoring with Prometheus, Grafana, and ELK stack. Proactive alerting and performance optimization.</p>
+                </div>
+
+                <div class="prop-card">
+                    <div class="prop-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>DevSecOps</h3>
+                    <p>Security-first approach with Trivy, SonarQube, and IAM best practices. Vulnerability scanning integrated into CI/CD.</p>
+                </div>
+
+                <div class="prop-card">
+                    <div class="prop-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>System Optimization</h3>
+                    <p>Deep systems knowledge enables performance tuning from kernel to cloud. Research-backed optimization strategies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">DevOps, cloud infrastructure, and systems engineering work</p>
+            
+            <div class="projects-grid">
+                <!-- DevOps Projects -->
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Enterprise DevOps Infrastructure</h3>
+                    <p class="project-desc">
+                        Full-scale cloud-native infrastructure on AWS with automated deployment, monitoring, 
+                        and security. Terraform IaC, Jenkins CI/CD, Kubernetes orchestration, and comprehensive 
+                        observability with Prometheus and Grafana.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">AWS EKS</span>
+                        <span class="tech-tag">Terraform</span>
+                        <span class="tech-tag">Jenkins</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">Prometheus</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-server"></i></div>
+                    <h3>Serverless Image Processing</h3>
+                    <p class="project-desc">
+                        Event-driven serverless pipeline using AWS Lambda, S3, and API Gateway. 
+                        Secure architecture with IAM policies, CORS configuration, and cost-efficient auto-scaling.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">AWS Lambda</span>
+                        <span class="tech-tag">S3</span>
+                        <span class="tech-tag">API Gateway</span>
+                        <span class="tech-tag">IAM</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-sync-alt"></i></div>
+                    <h3>GitOps CI/CD Pipeline</h3>
+                    <p class="project-desc">
+                        Complete CI/CD automation with GitHub Actions, Docker containerization, 
+                        Kubernetes deployment, and ArgoCD for GitOps-based continuous delivery.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">GitHub Actions</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">ArgoCD</span>
+                    </div>
+                </div>
+
+                <!-- Systems Engineering Projects -->
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-car-battery"></i></div>
+                    <h3>Electric Vehicle Control System</h3>
+                    <p class="project-desc">
+                        Published research on high-efficiency motor control implementing FOC and real-time 
+                        optimization. Demonstrates systems architecture and performance tuning expertise.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Embedded C</span>
+                        <span class="tech-tag">Real-time Control</span>
+                        <span class="tech-tag">CAN Protocol</span>
+                        <span class="tech-tag">RTOS</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Autonomous Robotics Systems</h3>
+                    <p class="project-desc">
+                        Award-winning autonomous robots with AI path planning, sensor integration, 
+                        and real-time decision making. Foundation for understanding distributed systems.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">Automation</span>
+                        <span class="tech-tag">System Integration</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-water"></i></div>
+                    <h3>Underwater ROV System</h3>
+                    <p class="project-desc">
+                        Remotely operated vehicle with real-time video streaming and motor control. 
+                        Experience in network protocols and low-latency communication systems.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Arduino</span>
+                        <span class="tech-tag">Video Streaming</span>
+                        <span class="tech-tag">Network Protocols</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <p class="section-subtitle">DevOps engineering and systems development background</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">Aug 2025 – Present</span>
+                        <h3>DevOps Engineer</h3>
+                        <h4>LRNOVA</h4>
+                        <p>Managing cloud infrastructure and deployment automation for AI applications. 
+                        Designing CI/CD pipelines, deploying scalable production systems, and implementing 
+                        comprehensive monitoring and optimization strategies.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">Feb 2025 – May 2025</span>
+                        <h3>DevSecOps Trainee</h3>
+                        <h4>National Telecommunications Institute (NTI)</h4>
+                        <p>Intensive 4-month training in DevSecOps practices. Hands-on with Docker, Kubernetes, 
+                        AWS, Terraform, Ansible, and Jenkins. Built secure CI/CD pipelines with integrated 
+                        vulnerability scanning.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">Jun 2025 – Sep 2025</span>
+                        <h3>Cloud Intern (Microsoft Azure)</h3>
+                        <h4>Inovasys</h4>
+                        <p>Cloud infrastructure training with focus on Azure services, resource management, 
+                        and cloud architecture design. Earned Azure Fundamentals (AZ-900) certification.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">Oct 2023 – Jan 2025</span>
+                        <h3>Teaching Assistant & Systems Engineering</h3>
+                        <h4>Higher Technological Institute (HTI)</h4>
+                        <p>Led embedded systems teams, delivered technical lectures, and mentored students 
+                        in robotics and automation. Developed documentation and teaching materials for 
+                        complex technical concepts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <p class="section-subtitle">Comprehensive DevOps and systems engineering expertise</p>
+            
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><i class="fas fa-cloud"></i> Cloud & Infrastructure</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">AWS (EKS, ECR, Lambda, S3, DynamoDB)</div>
+                        <div class="skill-item">Microsoft Azure</div>
+                        <div class="skill-item">OpenStack</div>
+                        <div class="skill-item">Multi-region Architecture</div>
+                        <div class="skill-item">Cloud Cost Optimization</div>
+                        <div class="skill-item">Infrastructure Design</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-cogs"></i> DevOps & Automation</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">Docker & Kubernetes</div>
+                        <div class="skill-item">Terraform & Ansible</div>
+                        <div class="skill-item">Jenkins & GitHub Actions</div>
+                        <div class="skill-item">ArgoCD (GitOps)</div>
+                        <div class="skill-item">CI/CD Pipeline Design</div>
+                        <div class="skill-item">Infrastructure as Code</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-shield-alt"></i> Security & Monitoring</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">DevSecOps Practices</div>
+                        <div class="skill-item">Trivy & SonarQube</div>
+                        <div class="skill-item">Prometheus & Grafana</div>
+                        <div class="skill-item">ELK Stack</div>
+                        <div class="skill-item">IAM & Security Policies</div>
+                        <div class="skill-item">Vulnerability Management</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming & Scripting</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">Python & Bash</div>
+                        <div class="skill-item">Go & React</div>
+                        <div class="skill-item">C & C++</div>
+                        <div class="skill-item">Linux Administration</div>
+                        <div class="skill-item">MySQL & NoSQL</div>
+                        <div class="skill-item">API Development</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-network-wired"></i> Networking & Systems</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">CCNA Certified</div>
+                        <div class="skill-item">TCP/IP & Network Protocols</div>
+                        <div class="skill-item">CAN & LIN Bus Systems</div>
+                        <div class="skill-item">Linux Kernel Development</div>
+                        <div class="skill-item">RTOS & Embedded Systems</div>
+                        <div class="skill-item">System Architecture</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-certificate"></i> Certifications</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">Microsoft Azure Fundamentals (AZ-900)</div>
+                        <div class="skill-item">Cisco CCNA</div>
+                        <div class="skill-item">DevSecOps Specialization - NTI</div>
+                        <div class="skill-item">Published Researcher - MDPI</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="awards">
+        <div class="container">
+            <h2 class="section-title">Awards & Recognition</h2>
+            <p class="awards-intro">14 international awards proving excellence in automation and innovation</p>
+            
+            <div class="awards-grid">
+                <div class="award-category">
+                    <h3><i class="fas fa-trophy"></i> First Place Awards (7)</h3>
+                    <ul>
+                        <li>Underwater Robotics Challenge - ARC</li>
+                        <li>Shell NXplore Marathon Car</li>
+                        <li>Autonomous Car - EVER Competition</li>
+                        <li>Climate Leaders ROV - YLF</li>
+                        <li>Cost & Manufacturing (Autonomous) - EVER</li>
+                        <li>Business Plan (Autonomous) - EVER</li>
+                        <li>Cost & Manufacturing (Dynamic) - EVER</li>
+                    </ul>
+                </div>
+
+                <div class="award-category">
+                    <h3><i class="fas fa-medal"></i> Second Place Awards (3)</h3>
+                    <ul>
+                        <li>RoboSoccer Robot - HTI</li>
+                        <li>Formula Firefighting Robot - Mutex Summit</li>
+                        <li>Business Plan (Dynamic) - EVER</li>
+                    </ul>
+                </div>
+
+                <div class="award-category">
+                    <h3><i class="fas fa-award"></i> Third Place & Recognition (4)</h3>
+                    <ul>
+                        <li>RoboSoccer Robot - HTI</li>
+                        <li>Robot Sumo - Egyptian Russian University</li>
+                        <li>RoboSoccer Robot - Egyptian Chinese University</li>
+                        <li>Ideal Student Award - Academic Excellence</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Work Together</h2>
+            <p class="section-subtitle">Available for DevOps consulting, cloud infrastructure projects, and automation solutions</p>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <a href="mailto:manaraly136@gmail.com">manaraly136@gmail.com</a>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <a href="tel:+201064363060">+20 106 436 3060</a>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/manaraly" target="_blank">github.com/manaraly</a>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/manar-aly-" target="_blank">linkedin.com/in/manar-aly-</a>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Research</h3>
+                    <a href="https://sciprofiles.com/profile/4620054" target="_blank">SciProfiles</a>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Location</h3>
+                    <p>Cairo, Egypt</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Manar Aly Zahran. All rights reserved.</p>
+            <p>DevOps Engineer | Cloud Infrastructure Specialist | Systems Engineering Expert</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%)';
+                navbar.style.backdropFilter = 'blur(10px)';
+            } else {
+                navbar.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeIn 0.8s ease-out forwards';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.project-card, .prop-card, .timeline-item, .award-category').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
